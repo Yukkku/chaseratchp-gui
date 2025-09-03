@@ -216,7 +216,7 @@ class SettingsStore extends EventTargetShim {
         if (Object.prototype.hasOwnProperty.call(storage, 'enabled')) {
             return storage.enabled;
         }
-        return !!manifest.enabledByDefault;
+        return false; // !!manifest.enabledByDefault;
     }
 
     getAddonSetting (addonId, settingId) {
@@ -249,7 +249,7 @@ class SettingsStore extends EventTargetShim {
         const manifest = this.getAddonManifest(addonId);
         const oldValue = this.getAddonEnabled(addonId);
         if (enabled === null) {
-            enabled = !!manifest.enabledByDefault;
+            enabled = false; // !!manifest.enabledByDefault;
             delete storage.enabled;
         } else if (typeof enabled === 'boolean') {
             storage.enabled = enabled;
