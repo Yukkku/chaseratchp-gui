@@ -924,6 +924,15 @@ class MenuBar extends React.Component {
                                 </span>
                             </div>
                         )}
+                        <div
+                            className={classNames(styles.menuBarItem, styles.hoverable)}
+                            onClick={() => EditorPreload.openChaserServer()}
+                        >
+                            <svg draggable={false} width={20} height={20} viewBox="0 0 20 20">
+                                <path d="M18,10L2,1V19Z" fill="currentcolor"/>
+                            </svg>
+                            <span className={styles.collapsibleLabel}>対戦</span>
+                        </div>
                     </div>
 
                     <Divider className={styles.divider} />
