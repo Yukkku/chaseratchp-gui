@@ -75,6 +75,26 @@
         "extensions": ["chaserp"]
     },
     {
+        "isStage": false,
+        "name": "ぼーっとロボット",
+        "variables": {},
+        "blocks": {
+            "0VuJuup5j6kZjLUd_En;":{"opcode":"event_whenflagclicked","next":"^)SZ?JLSso8V+v.mGM`B","parent":null,"topLevel":true,"x":0,"y":0},
+            "^)SZ?JLSso8V+v.mGM`B":{"opcode":"chaserp_connect","next":"~VpAWiGIq_9}UG$_j[DO","parent":"0VuJuup5j6kZjLUd_En;","inputs":{"HOST":[1,[10,"127.0.0.1"]],"PORT":[1,[4,2009]],"NAME":[1,[10,"ぼーっとロボット"]]}},
+            "~VpAWiGIq_9}UG$_j[DO":{"opcode":"control_forever","parent":"^)SZ?JLSso8V+v.mGM`B","inputs":{"SUBSTACK":[2,"WFz!ib~U#Qa*pf4(S8D5"]}},
+            "WFz!ib~U#Qa*pf4(S8D5":{"opcode":"chaserp_search","parent":"~VpAWiGIq_9}UG$_j[DO","fields":{"DIR":["u"]}}
+        },
+        "costumes": [{
+            "name": "Robot",
+            "bitmapResolution": 2,
+            "dataFormat": "png",
+            "assetId": "249c3b1b4734a0117945aa5878e33976",
+            "md5ext": "249c3b1b4734a0117945aa5878e33976.png"
+        }],
+        "sounds":[],
+        "extensions":["chaserp"]
+    },
+    {
         "name": "Abby",
         "tags": [
             "people",
