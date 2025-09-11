@@ -65,13 +65,11 @@
             "(M8I$G6;2x_(L2o2SbN~":{"opcode":"operator_not","parent":"YSa.A/;Gwk+E`0Z[w^ze","inputs":{"OPERAND":[2,"DaMg=c+GhX[.j2=`Bmr]"]}}
         },
         "costumes": [{
-            "name":"Controller",
-            "bitmapResolution":2,
-            "dataFormat":"png",
-            "assetId":"5878667ede08d17e3a5d3954d16660e5",
-            "md5ext": "5878667ede08d17e3a5d3954d16660e5.png",
-            "rotationCenterX":96,
-            "rotationCenterY":56
+            "name": "Controller",
+            "bitmapResolution": 2,
+            "dataFormat": "png",
+            "assetId": "a00bd8b9d6fc8e220f3e139e9536a3c4",
+            "md5ext": "a00bd8b9d6fc8e220f3e139e9536a3c4.png"
         }],
         "sounds": [],
         "extensions": ["chaserp"]
