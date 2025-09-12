@@ -82,7 +82,7 @@
             "A":{"opcode":"event_whenflagclicked","next":"B","parent":null,"topLevel":true,"x":0,"y":0},
             "B":{"opcode":"chaserp_connect","next":"C","parent":"A","inputs":{"HOST":[1,[10,"127.0.0.1"]],"PORT":[1,[4,2009]],"NAME":[1,[10,"ぼーっとロボット"]]}},
             "C":{"opcode":"control_forever","parent":"B","inputs":{"SUBSTACK":[2,"D"]}},
-            "D":{"opcode":"chaserp_search","parent":"C","fields":{"DIR":["u"]}}
+            "D":{"opcode":"chaserp_donothing","parent":"C"}
         },
         "costumes": [{
             "name": "Robot",
