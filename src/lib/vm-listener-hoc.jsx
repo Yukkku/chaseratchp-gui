@@ -28,6 +28,13 @@ import implementGuiAPI from './tw-extension-gui-api';
 
 let compileErrorCounter = 0;
 
+const remotekeyListeners = new Set();
+EditorPreload.onRemotekey(data => {
+    for (const listener of remotekeyListeners) try {
+        listener(data);
+    } catch (_) {}
+});
+
 /*
  * Higher Order Component to manage events emitted by the VM
  * @param {React.Component} WrappedComponent component to manage VM events for
@@ -40,6 +47,7 @@ const vmListenerHOC = function (WrappedComponent) {
             bindAll(this, [
                 'handleKeyDown',
                 'handleKeyUp',
+                'handleRemoteKey',
                 'handleProjectChanged',
                 'handleTargetsUpdate',
                 'handleCloudDataUpdate',
@@ -81,6 +89,7 @@ const vmListenerHOC = function (WrappedComponent) {
             if (this.props.attachKeyboardEvents) {
                 document.addEventListener('keydown', this.handleKeyDown);
                 document.addEventListener('keyup', this.handleKeyUp);
+                remotekeyListeners.add(this.handleRemoteKey);
             }
             this.props.vm.postIOData('userData', {username: this.props.username});
         }
@@ -99,6 +108,7 @@ const vmListenerHOC = function (WrappedComponent) {
             if (this.props.attachKeyboardEvents) {
                 document.removeEventListener('keydown', this.handleKeyDown);
                 document.removeEventListener('keyup', this.handleKeyUp);
+                remotekeyListeners.delete(this.handleRemoteKey);
             }
 
             this.props.vm.off('targetsUpdate', this.handleTargetsUpdate);
@@ -195,6 +205,9 @@ const vmListenerHOC = function (WrappedComponent) {
             if (e.target !== document && e.target !== document.body) {
                 e.preventDefault();
             }
+        }
+        handleRemoteKey(e) {
+            this.props.vm.postIOData('keyboard', e);
         }
         render () {
             const {
