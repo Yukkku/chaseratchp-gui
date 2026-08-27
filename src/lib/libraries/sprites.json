@@ -64,12 +64,12 @@
             ")":{"opcode":"chaserp_walk","parent":"$","fields":{"DIR":["l"]}},
             "*":{"opcode":"chaserp_walk","parent":"$","fields":{"DIR":["r"]}}
         },
-        "costumes": [{
+      "costumes": [{
             "name": "Controller",
             "bitmapResolution": 2,
             "dataFormat": "png",
-            "assetId": "a00bd8b9d6fc8e220f3e139e9536a3c4",
-            "md5ext": "a00bd8b9d6fc8e220f3e139e9536a3c4.png"
+            "assetId": "a87aab2605675d7a4dcb6324fc3b6b54",
+            "md5ext": "a87aab2605675d7a4dcb6324fc3b6b54.png"
         }],
         "sounds": [],
         "tags": [],
@@ -89,8 +89,8 @@
             "name": "Robot",
             "bitmapResolution": 2,
             "dataFormat": "png",
-            "assetId": "249c3b1b4734a0117945aa5878e33976",
-            "md5ext": "249c3b1b4734a0117945aa5878e33976.png"
+            "assetId": "80720e4b94ec31a0c4316b86dc8d3010",
+            "md5ext": "80720e4b94ec31a0c4316b86dc8d3010.png"
         }],
         "sounds": [],
         "tags": [],
